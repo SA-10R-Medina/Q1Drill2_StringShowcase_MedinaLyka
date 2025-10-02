@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Profile</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <style>
+      body {
+        background-color: #9bbc0f;
+        color: #0f380f;
+        font-family: "Press Start 2P", monospace, monospace;
+        font-size: 14px;
+        padding: 20px;
+      }
+      label {
+        display: block;
+        margin-top: 10px;
+      }
+      input, button {
+        margin-top: 5px;
+        padding: 5px;
+        border: 2px solid #0f380f;
+        background: #8bac0f;
+        color: #0f380f;
+        font-family: "Press Start 2P", monospace, monospace;
+        font-size: 12px;
+        width: 250px;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+      button {
+        cursor: pointer;
+      }
+      #output {
+        margin-top: 20px;
+        white-space: pre-wrap;
+        border: 2px solid #0f380f;
+        padding: 10px;
+        background: #8bac0f;
+        width: 250px;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>PROFILE</h1>
+    <label for="name">NAME:</label>
+    <input id="name" type="text" />
+    <label for="age">AGE:</label>
+    <input id="age" type="number" />
+    <label for="school">SCHOOL:</label>
+    <input id="school" type="text" />
+    <button id="submit-btn">GENERATE</button>
+    <div id="output"></div>
+    <py-config>
+      [[fetch]]
+      files = ["main.py"]
+    </py-config>
+    <script type="py" src="./main.py"></script>
+  </body>
+</html>
